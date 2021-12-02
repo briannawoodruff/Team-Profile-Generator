@@ -1,0 +1,20 @@
+header {
+    height: 15vh;
+    margin-bottom: 40px;
+}
+
+h1 {
+    padding: 30px;
+}
+
+p {
+    display: inline;
+}
+
+/* Select */
+.all {
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+  }
