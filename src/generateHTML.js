@@ -1,5 +1,5 @@
 function generateHTML(data) {
-    // console.log(data);
+    console.log(data);
 
     teamArray = []
 
@@ -8,7 +8,6 @@ function generateHTML(data) {
         let role = employee.getRole();
 
         if (role === 'Manager') {
-            console.log("hi", employee)
             const managerCard = generateManagerCard(employee);
             teamArray.push(managerCard)
         } if (role === 'Engineer') {
@@ -25,7 +24,6 @@ function generateHTML(data) {
 }
 
 function generatePage(teamCards) {
-   console.log("ok", teamCards)
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -58,7 +56,6 @@ function generatePage(teamCards) {
 }
 
 function generateManagerCard(manager) {
-    console.log("hello", manager.name)
     return `
             <div class="card border-dark m-1 shadow" style="width: 18rem">
                     <div class='card-header bg-info'>
@@ -77,7 +74,6 @@ function generateManagerCard(manager) {
 }
 
 function generateEngineerCard(engineer) {
-    console.log("hello", engineer.name)
     return `
             <div class="card border-dark m-1 shadow" style="width: 18rem">
                     <div class='card-header bg-info'>
@@ -96,12 +92,11 @@ function generateEngineerCard(engineer) {
 }
 
 function generateInternCard(intern) {
-    console.log("hello", intern.name)
     return `
             <div class="card border-dark m-1 shadow" style="width: 18rem">
                     <div class='card-header bg-info'>
                       <h3 class="card-title"> ${intern.name} </h3>
-                      <h6 class="card-text"><i class="fa graduation-cap"></i> Intern </h6>
+                      <h6 class="card-text"><i class="fa fa-graduation-cap"></i> Intern </h6>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
